@@ -357,19 +357,22 @@ display: none;
 </div>
 
 
-<div id="annotaton-via-funannotate" class="section level2">
-<h2>Annotaton via Funannotate</h2>
-<p>Retrieve the software container environment from Dokcer Hub</p>
-<pre class="bash"><code>pull image from docker
-#1. create a coda environment for the tool
-#2. activate the environment
-conda activate _squali
-#3. Add necessayry bioinformatics chnnels, if they are not already configured
-conda config --add channels config 
-conda confif --add channels bioconda
-conda config --add channels conda-forge
-#4. Install sequali from bioconda channel
-conda install-y bioconda::sequali</code></pre>
+<div id="annotation-via-funannotate" class="section level2">
+<h2>Annotation via Funannotate</h2>
+<p>Retrieve the software container environment from Docker Hub</p>
+<pre class="bash"><code>docker pull nextgenusfs/funannotate</code></pre>
+</div>
+<div id="squali-installation" class="section level2">
+<h2>Squali installation</h2>
+<p>commands for conda installation</p>
+<pre class="bash"><code>conda activate _squali
+conda config --add channels 
+bioconda
+conda config --add channels 
+conda-forge
+# Install sequali from bioconda channel
+conda install -y 
+bioconda::sequali</code></pre>
 </div>
 <div id="r-markdown" class="section level2">
 <h2>R Markdown</h2>

@@ -9,19 +9,24 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Annotaton via Funannotate
-Retrieve the software container environment from Dokcer Hub
+## Annotation via Funannotate
+Retrieve the software container environment from Docker Hub
+
 ```{bash, eval=FALSE}
-pull image from docker
-#1. create a coda environment for the tool
-#2. activate the environment
+docker pull nextgenusfs/funannotate
+```
+
+## Squali installation
+commands for conda installation
+```{bash,  eval = FALSE}
 conda activate _squali
-#3. Add necessayry bioinformatics chnnels, if they are not already configured
-conda config --add channels config 
-conda confif --add channels bioconda
-conda config --add channels conda-forge
-#4. Install sequali from bioconda channel
-conda install-y bioconda::sequali
+conda config --add channels 
+bioconda
+conda config --add channels 
+conda-forge
+# Install sequali from bioconda channel
+conda install -y 
+bioconda::sequali
 ```
 
 ## R Markdown
