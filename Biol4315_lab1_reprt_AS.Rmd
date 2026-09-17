@@ -1,10 +1,15 @@
 Project Report
 ---
-title: "Biol4315Lab-1Report"
+title: "Biol 4315 Lab-1Report"
 output: html_document
 date: "2026-09-10"
 ---
 Partner: Catherine Ho
+
+## Loading rmarkdown package
+library(rmarkdown)
+## Loading knitr package
+library(knitr)
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -29,19 +34,34 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-library(vegan)
+
+## Installing vegan package
 ```{r, eval=FALSE}
-# This chunk will not be evaluated
 install.packages("vegan")
 ```
 
-I am going to load ggplot2 package and plot a scatter plot of speed vs dist from the cars dataset
 
+## ggplot2
+Load ggplot2 package and plot a scatter plot of speed vs dist from the cars dataset
 ```{r}
-# Load the ggplot2 package
 library(ggplot2)
-
-# Create a scatter plot of speed vs dist using cars dataset
 ggplot(cars, aes(x=speed, y=dist)) +
        geom_point()
 ```
+
+
+## Annotation via Funannotate
+Retrieve Funannotate from Docker Hub
+```{bash, eval=FALSE}
+docker pull nextgenusfs/funannotate
+```
+
+
+## Sequali installation
+Code to install sequali
+```{bash,  eval = FALSE}
+conda create -n sequali-env python=3.13 conda-forge
+conda activate sequali-env
+conda install sequali=1.0.2 -c bioconda
+```
+
