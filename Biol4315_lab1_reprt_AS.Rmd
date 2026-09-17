@@ -36,7 +36,7 @@ plot(pressure)
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 ## Installing vegan package
-```{r, eval=FALSE}
+```{r, eval = FALSE}
 install.packages("vegan")
 ```
 
@@ -45,14 +45,15 @@ install.packages("vegan")
 Load ggplot2 package and plot a scatter plot of speed vs dist from the cars dataset
 ```{r}
 library(ggplot2)
-ggplot(cars, aes(x=speed, y=dist)) +
-       geom_point()
+ggplot(cars, aes(x = speed, y = dist)) +
+       geom_point() +
+       labs(title = "Scatter Plot of speed vs dist", x = "speed", y = "dist")
 ```
 
 
 ## Annotation via Funannotate
 Retrieve Funannotate from Docker Hub
-```{bash, eval=FALSE}
+```{bash, eval = FALSE}
 docker pull nextgenusfs/funannotate
 ```
 
